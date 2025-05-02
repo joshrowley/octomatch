@@ -2288,26 +2288,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hub-stats@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "hub-stats@workspace:."
-  dependencies:
-    "@clerk/nextjs": "npm:^6.18.4"
-    "@eslint/eslintrc": "npm:^3"
-    "@tailwindcss/postcss": "npm:^4"
-    "@types/node": "npm:^20"
-    "@types/react": "npm:^19"
-    "@types/react-dom": "npm:^19"
-    eslint: "npm:^9"
-    eslint-config-next: "npm:15.3.1"
-    next: "npm:^15.3.1"
-    react: "npm:^19.1.0"
-    react-dom: "npm:^19.1.0"
-    tailwindcss: "npm:^4"
-    typescript: "npm:^5"
-  languageName: unknown
-  linkType: soft
-
 "ignore@npm:^5.2.0, ignore@npm:^5.3.1":
   version: 5.3.2
   resolution: "ignore@npm:5.3.2"
@@ -3111,6 +3091,26 @@ __metadata:
   checksum: 10c0/3c47814fdc64842ae3d5a74bc9d06bdd8d21563c04d9939bf6716a9c00596a4ebc342552f8934013d1ec991c74e3671b26710a0c51815f0b603795605ab6b2c9
   languageName: node
   linkType: hard
+
+"octomatch@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "octomatch@workspace:."
+  dependencies:
+    "@clerk/nextjs": "npm:^6.18.4"
+    "@eslint/eslintrc": "npm:^3"
+    "@tailwindcss/postcss": "npm:^4"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^19"
+    "@types/react-dom": "npm:^19"
+    eslint: "npm:^9"
+    eslint-config-next: "npm:15.3.1"
+    next: "npm:^15.3.1"
+    react: "npm:^19.1.0"
+    react-dom: "npm:^19.1.0"
+    tailwindcss: "npm:^4"
+    typescript: "npm:^5"
+  languageName: unknown
+  linkType: soft
 
 "optionator@npm:^0.9.3":
   version: 0.9.4

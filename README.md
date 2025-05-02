@@ -1,3 +1,7 @@
+# OctoMatch
+
+OctoMatch is a platform that intelligently matches developers with open source GitHub issues based on their contributions and interests.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
