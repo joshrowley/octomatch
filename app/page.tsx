@@ -1,103 +1,88 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import Image from 'next/image';
+import { Button } from '@/components/ui/button'; // If using shadcn/ui
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-white text-gray-900 px-4 py-10 md:py-20">
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto text-center">
+        <div className="flex justify-center mb-4">
+          <Image src="/octomatch-logo.svg" alt="OctoMatch Logo" width={48} height={48} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <h1 className="text-4xl font-bold md:text-5xl">
+          Find the perfect issue to solve
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Get personalized open source issue recommendations based on your GitHub history. Start contributing in minutes.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            Sign in with GitHub
+          </Button>
+          <Button variant="outline">Learn More</Button>
+        </div>
+      </section>
+
+      {/* How It Works & Why OctoMatch */}
+      <section className="mt-20 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 px-4">
+        <div>
+          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <span role="img" aria-label="How">🔧</span> How It Works
+          </h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li>Connect your GitHub account</li>
+            <li>We analyze your skills and history</li>
+            <li>You get matched with relevant open source issues</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <span role="img" aria-label="Why">✨</span> Why OctoMatch?
+          </h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li>Personalized recommendations</li>
+            <li>Jump into real issues, no fluff</li>
+            <li>Improve your GitHub profile with high-quality PRs</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Matched Issues Preview */}
+      <section className="mt-20 max-w-4xl mx-auto px-4">
+        <div className="border rounded-lg shadow-sm p-6 bg-gray-50">
+          <h3 className="text-xl font-semibold mb-2">Matched Issues</h3>
+          <p className="text-sm text-gray-500 mb-4">Find open source issues tailored to your profile.</p>
+          <ul className="space-y-4">
+            <li className="p-4 bg-white rounded-md border">
+              <p className="font-medium">Fix accessibility bugs in the navbar</p>
+              <p className="text-sm text-gray-500">repoexample • 1g • <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded">good first issue</span> <span className="bg-gray-200 text-gray-700 px-2 py-0.5 rounded ml-2">react</span></p>
+            </li>
+            <li className="p-4 bg-white rounded-md border">
+              <p className="font-medium">Update the README with contributing guidelines</p>
+              <p className="text-sm text-gray-500">repoexample • 1g • <span className="bg-gray-200 text-gray-700 px-2 py-0.5 rounded">react</span></p>
+            </li>
+            <li className="p-4 bg-white rounded-md border">
+              <p className="font-medium">Implement search functionality</p>
+              <p className="text-sm text-gray-500">repoexample • 1g • <span className="bg-gray-200 text-gray-700 px-2 py-0.5 rounded">react</span></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="mt-20 text-center">
+        <h2 className="text-2xl font-semibold">
+          🔒 Start Contributing Today
+        </h2>
+        <p className="mt-2 text-gray-600">Ready to find your next issue?</p>
+        <div className="mt-4">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            Sign in with GitHub
+          </Button>
+        </div>
+      </section>
+    </main>
   );
 }
