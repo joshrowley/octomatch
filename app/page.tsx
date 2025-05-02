@@ -1,24 +1,20 @@
 'use client';
 
-import Image from 'next/image';
-import { Button } from '@/components/ui/button'; // If using shadcn/ui
+import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-gray-900 px-4 py-10 md:py-20">
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto text-center">
-        <div className="flex justify-center mb-4">
-          <Image src="/octomatch-logo.svg" alt="OctoMatch Logo" width={48} height={48} />
-        </div>
-        <h1 className="text-4xl font-bold md:text-5xl">
-          Find the perfect issue to solve
+        <h1 className="text-6xl md:text-7xl font-black mb-8 text-gray-900">
+          OctoMatch
         </h1>
         <p className="mt-4 text-lg text-gray-600">
           Get personalized open source issue recommendations based on your GitHub history. Start contributing in minutes.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button className="bg-purple-600 hover:bg-purple-700 text-white">
             Sign in with GitHub
           </Button>
           <Button variant="outline">Learn More</Button>
@@ -78,7 +74,7 @@ export default function HomePage() {
         </h2>
         <p className="mt-2 text-gray-600">Ready to find your next issue?</p>
         <div className="mt-4">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button className="bg-purple-600 hover:bg-purple-700 text-white">
             Sign in with GitHub
           </Button>
         </div>
